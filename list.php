@@ -23,20 +23,19 @@
 					<h3>Current videos</h3>
 					
 <table>		
-<tr><th>Title</th><th>Length</th><th>Rate</th></tr>
+<tr><th>Title</th><th>Length</th><th>Cuteness Rate</th></tr>
 <?php
 	include('dbconnect.php');
-	$query = "SELECT firstname, lastname,date,city,state FROM abductions ORDER BY lastname";
+	$query = "SELECT title, url, cuteness FROM videos ORDER BY title";
     $result = mysqli_query($db, $query)
                          or die("Error Querying Database");
     while($row = mysqli_fetch_array($result)) {
-  		$firstname = $row['firstname'];
-  		$lastname = $row['lastname'];
-		$city = $row['city'];
-		$state = $row['state'];
-		$date = $row['date'];
+  		$title = $row['title'];
+  		$url = $row['url'];
+		$rate = $row['cuteness'];
 
-  	echo "<tr><td>$date<td>$firstname $lastname</td><td>$city, $state</td></tr>\n";
+
+  	echo "<tr><td>$title<td>$url</td><td>$rate</td></tr>\n";
   }                 
                          
                          

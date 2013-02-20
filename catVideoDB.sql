@@ -1,7 +1,7 @@
 
 
 CREATE DATABASE IF NOT EXISTS catvideos;
-GRANT ALL PRIVILEGES ON catVideoDB.* to 'ylee'@'localhost' identified by 'hello123';
+GRANT ALL PRIVILEGES ON catvideos.* to 'ylee'@'localhost' identified by 'hello123';
 USE catvideos;
 
 CREATE TABLE IF NOT EXISTS videos (
