@@ -25,7 +25,7 @@
 					
 					<form method = "post" action = "search2.php">
 					<table>
-					<tr><td><input type="text" id="search" name="search" size="70"/></td>
+					<tr><td><img src="cat1.png"/></td><td><input type="text" id="search" name="search" size="70"/></td>
 
 					<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
 					</table>
