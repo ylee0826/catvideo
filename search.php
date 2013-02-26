@@ -29,6 +29,24 @@
 
 					<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
 					</table>
+					<table>
+					<tr><th>Title</th><th>URL</th><th>Length</th><th>Rating</th></tr>
+					<?php
+						include('dbconnect.php');
+						$query = "SELECT title, url, vidlength, rating FROM videos ORDER BY title";
+						$result = mysqli_query($db, $query)
+							or die("Error Querying Database");
+						while($row = mysqli_fetch_array($result)){
+							$title = $row['title'];
+							$url = $row['url'];
+							$vidlength = $row['vidlength'];
+							$rate = $row['rating'];
+						echo "<tr><td>$title</td><td>$url</td><td>$vidlength</td><td>$rate</td></tr>\n";
+						}
+						
+						mysqli_close($db);
+					?>
+					</table>
 					
 					</form>
 					<!-- END CONTENT -->
