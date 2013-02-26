@@ -27,9 +27,9 @@
 					<table>
 					<tr><td>Title of video</td><td><input type="text" id="title" name="title" size="50" /></td></tr>
 					<tr><td>URL</td><td><input type="text" id="url" name="url" size="50" /></td></tr>
-					<tr><td>Video length (h/m/s)</td><td><input type="number" name="hours" min="0" max="10" step="1" value="0" size="1"/>
-					<input type="number" name="minutes" min="0" max="59" step="1" value="0" size="1"/>
-					<input type="number" name="seconds" min="0" max="59" step="1" value="0" size="1"/></td></tr>
+					<tr><td>Video length (hh/mm/ss)</td><td><input type="number" name="hours" min="0" max="10" step="1" value="00" size="1"/>
+					<input type="number" name="minutes" min="0" max="59" step="1" value="00" size="1"/>
+					<input type="number" name="seconds" min="0" max="59" step="1" value="00" size="1"/></td></tr>
 					<tr><td>Breed (optional)</td><td><input type="text" id="breed" name="breed" size="50" /></td></tr>
 					
 					
@@ -45,6 +45,8 @@
 					<tr><td>Tags (e.g. playing, meowing, cuddling)</td><td><input type="text" id="tags" name="tags" size="50" /></td></tr>
 					
 					<tr><td>Overall rating (between 0.0 and 10.0)</td><td><input type="number" name="rating" min="0" max="10" step="0.1" value="0.0"/></td></tr>
+			
+					<tr><td>&nbsp;</td><td><input type="submit" value="Submit" /></td></tr>
 			
 					</table>
 					

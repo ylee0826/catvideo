@@ -26,20 +26,22 @@
 					
 					<?php
 					include('dbconnect.php');
-					$firstname = $_POST['firstname'];
-					$lastname = $_POST['lastname'];
-					$city = $_POST['city'];
-					$state = $_POST['state'];
-					$yr = $_POST['year'];
-					$m = $_POST['month'];
-					$d = $_POST['day'];
-					$date = "$yr-$m-$d";
-					echo "<p>$firstname $lastname</p>";
-					echo '<p>$firstname $lastname</p>';
-					echo "<p>$city</p>";
+					$title = $_POST['title'];
+					$url = $_POST['url'];
+					$category = $_POST['category'];
+					$hours = $_POST['hours'];
+					$minutes = $_POST['minutes'];
+					$seconds = $_POST['seconds'];
+					$vidlength = "$hours:$minutes:$seconds";
+					$breed = $_POST['breed'];
+					$tags = $_POST['tags'];
+					$rating = $_POST['rating'];
+					echo "<p>$title $url</p>";
+					echo '<p>$title $url</p>';
+					echo "<p>$category</p>";
 					
-					$query = "INSERT INTO abductions (firstname, lastname, city, state, date) VALUES ('";
-					$query = $query . $firstname . "', '" . $lastname . "', '" . $city . "', '" . $state . "', '" . $date. "')";
+					$query = "INSERT INTO videos (title, url, vidlength, breed, category, tags, rating) VALUES ('";
+					$query = $query . $title . "', '" . $url . "', '" . $vidlength . "', '" . $breed. "', '" . $category . "', '" . $tags . "', '" . $rating . "')";
 					echo "<p>QUERY   $query</p>";
 					$result = mysqli_query($db, $query)
                          or die("Error Querying Database");
