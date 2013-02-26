@@ -20,36 +20,32 @@
 				<div class="content">
 				
 					<!-- CONTENT -->
-					<h3>Cat Video</h3>
-					<p>Welcome to the Cat video website. </p>
+					<h3>Submission</h3>
+					<p>Submit a cat video we missed! Just fill out the form. </p>
 					
 					<form method = "post" action = "report2.php">
 					<table>
-					<tr><td>First Name</td><td><input type="text" id="firstname" name="firstname" /></td></tr>
-					<tr><td>Last Name</td><td><input type="text" id="lastname" name="lastname" /></td></tr>
-					<tr><td>Date Abducted</td><td><input type="number" name="month" min="1" max="12" step="1" value="1" size="3"/>
-					<input type="number" name="day" min="1" max="31" step="1" value="1" size="3"/>
-					<input type="number" name="year" min="2009" max="2014" step="1" value="2011" size="4"/></td></tr>
+					<tr><td>Title of video</td><td><input type="text" id="title" name="title" size="50" /></td></tr>
+					<tr><td>URL</td><td><input type="text" id="url" name="url" size="50" /></td></tr>
+					<tr><td>Video length (h/m/s)</td><td><input type="number" name="hours" min="0" max="10" step="1" value="0" size="1"/>
+					<input type="number" name="minutes" min="0" max="59" step="1" value="0" size="1"/>
+					<input type="number" name="seconds" min="0" max="59" step="1" value="0" size="1"/></td></tr>
+					<tr><td>Breed (optional)</td><td><input type="text" id="breed" name="breed" size="50" /></td></tr>
 					
 					
-					<tr><td>Location (city)</td><td><input type="text" name="city" id="city"/> 
+					<tr><td>Category</td><td> 
 					
-					<select name="state">
-					<option>AL</option>
-					<option>AK</option>
-					<option>AS</option>
-					<option>AZ</option>
-					<option>CA</option>
-					<option>NM</option>
-					<option>TX</option>
-					<option>VA</option>
+					<select name="category">
+					<option>Cute</option>
+					<option>Funny</option>
+					<option>Heartwarming</option>
+					<option>Awesome</option>
 					</select></td></tr>
 					
-					<tr><td>How Scary?</td><td>not scary <input type="range" name="scary" min="1" max="10" step="1" value="5"/>scary</td></tr>
-					<tr><td>Appearance</td><td>&nbsp;</td></tr>
-					<tr><td><input type="checkbox" name="bald" value="checked" /> bald</td><td><input type="checkbox" name="almond" value="checked" /> almond eyes</td></tr>
-					<tr><td><input type="checkbox" name="blue" value="checked" /> blue</td><td><input type="checkbox" name="fingers" value="checked" /> long fingers</td></tr>
-					<tr><td>&nbsp;</td><td><input type="submit" value="Report Abduction" /></td></tr>
+					<tr><td>Tags (e.g. playing, meowing, cuddling)</td><td><input type="text" id="tags" name="tags" size="50" /></td></tr>
+					
+					<tr><td>Overall rating (between 0.0 and 10.0)</td><td><input type="number" name="rating" min="0" max="10" step="0.1" value="0.0"/></td></tr>
+			
 					</table>
 					
 					</form>
