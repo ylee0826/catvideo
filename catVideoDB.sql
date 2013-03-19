@@ -50,3 +50,90 @@ CREATE TABLE IF NOT EXISTS vid_tags (
 	FOREIGN KEY (tag_id) REFERENCES tags(tag_id),
 	PRIMARY KEY (id, tag_id)
 );
+
+
+INSERT INTO videos(title, url, vidlength, rating) VALUES
+('Many too small boxes and Maru', 'https://www.youtube.com/watch?v=2XID_W4neJo', '00:02:58', 8.2),
+('Cat wants to be petted like this', 'http://www.youtube.com/watch?feature=player_embedded&v=V6JCaT69v1M', '00:00:10', 5.0),
+('ROOMBA Cat uses iRobot Roomba 560 Robotic Vacuum Cleaner', 'http://www.youtube.com/watch?feature=player_embedded&v=ewdbilSWjaM', '00:00:59', 4.0),
+('Surprised Kitty', 'http://www.youtube.com/watch?feature=player_embedded&v=0Bmhjf0rKe8', '00:00:17', 9.0),
+('Cute cat thinks it\'s a dog', 'http://www.youtube.com/watch?feature=player_embedded&v=8ZuCT4PmurY#!', '00:01:09', 6.0),
+('Epic Cat Tower Battle', 'https://www.youtube.com/watch?v=33uTpyH_OFY', '00:01:59', 7.9),
+('Cat barks like a dog at bubbles', 'http://www.youtube.com/watch?v=IRxX6LZmr2U', '00:00:55', 8.5);
+
+INSERT INTO tags(tag_name) VALUES
+('funny'),
+('cute'),
+('heartwarming'),
+('amazing'),
+('playing'),
+('sleeping'),
+('cuddling'),
+('fighting'),
+('biting'),
+('vocalizing'),
+('chasing'),
+('jumping'),
+('eating'),
+('hissing'),
+('climbing'),
+('acting like a dog'),
+('being pet'),
+('kitten'),
+('doing tricks');
+
+INSERT INTO breeds(breed_name) VALUES
+('Unspecified'),
+('Persian'),
+('Exotic shorthair'),
+('British shorthair'),
+('Siamese'),
+('Ragdoll'),
+('Bengal'),
+('Tabby'),
+('Scottish fold'),
+('Hairless');
+
+INSERT INTO vid_tags(id, tag_id) VALUES
+(1, 1),
+(1, 5),
+(2, 1),
+(2, 2),
+(2, 17),
+(2, 19),
+(3, 1),
+(4, 1),
+(4, 2),
+(4, 5),
+(4, 18),
+(5, 1),
+(5, 11),
+(5, 16),
+(6, 1),
+(6, 5),
+(6, 8),
+(6, 9),
+(6, 12),
+(6, 15),
+(7, 1),
+(7, 2),
+(7, 5),
+(7, 10),
+(7, 15);
+
+INSERT INTO vid_breeds(id, breed_id) VALUES
+(1, 9),
+(2, 8),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(6, 8),
+(7, 1),
+(7, 8);
+
+
+
+
+
+
