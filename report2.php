@@ -28,24 +28,65 @@
 					include('dbconnect.php');
 					$title = $_POST['title'];
 					$url = $_POST['url'];
-					$category = $_POST['category'];
 					$hours = $_POST['hours'];
 					$minutes = $_POST['minutes'];
 					$seconds = $_POST['seconds'];
 					$vidlength = "$hours:$minutes:$seconds";
-					$breed = $_POST['breed'];
-					$tags = $_POST['tags'];
 					$rating = $_POST['rating'];
+					
 					echo "<p>$title $url</p>";
 					echo '<p>$title $url</p>';
-					echo "<p>$category</p>";
 					
-					$query = "INSERT INTO videos (title, url, vidlength, breed, category, tags, rating) VALUES ('";
-					$query = $query . $title . "', '" . $url . "', '" . $vidlength . "', '" . $breed. "', '" . $category . "', '" . $tags . "', '" . $rating . "')";
+					$query = "INSERT INTO videos (title, url, vidlength, rating) VALUES ('";
+					$query = $query . $title . "', '" . $url . "', '" . $vidlength . "', '" . $rating . "')";
+					
 					echo "<p>QUERY   $query</p>";
 					$result = mysqli_query($db, $query)
                          or die("Error Querying Database");
 
+					
+					
+					
+					$id_query = "SELECT id FROM videos WHERE title = '" . $title . "'";
+					$id = mysqli_query($db, $id_query)
+						or die("Error Querying Database for ID");
+					echo "<p> ID $id</p>";
+					
+					$breeds_query = "INSERT INTO vid_breeds (id, breed_id) VALUES ('";
+					if ($_POST['Unspecified'] == 'checked')
+						$breed_number = 1;
+						$breeds_query = $breeds_query . $id . "',  '" . $breed_number . "' ),";
+					if ($_POST['Persian'] == 'checked')
+						$breed_number = 2;
+						$breeds_query = $breeds_query . $id . "',  '" . $breed_number . "'),";
+					if ($_POST['Exotic shorthair'] == 'checked')
+						$breed_number = 3;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['British shorthair'] == 'checked')
+						$breed_number = 4;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Siamese'] == 'checked')
+						$breed_number = 5;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Ragdoll'] == 'checked')
+						$breed_number = 6;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Bengal'] == 'checked')
+						$breed_number = 7;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Tabby'] == 'checked')
+						$breed_number = 8;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Scottish fold'] == 'checked')
+						$breed_number = 9;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "'),";
+					if ($_POST['Hairless'] == 'checked')
+						$breed_number = 10;
+						$breeds_query = $breeds_query . $id . "', '" . $breed_number . "')";
+						
+					echo "<p> $breeds_query </p>";
+					
+					
 					
 					?>
 					
