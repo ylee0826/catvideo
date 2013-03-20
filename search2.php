@@ -27,8 +27,9 @@
 					<?php
 					include('dbconnect.php');
 					$searchValue = $_POST['search'];
-
-					$query = "SELECT title,url,vidlength,rating FROM videos WHERE title LIKE '%".$searchValue. "%'";
+					echo "<p>$searchValue</p>";
+					
+					$query = "SELECT title,url,rating FROM videos WHERE title LIKE '%".$searchValue. "%'";
 					$result = mysqli_query($db, $query)
 							or die("Error Querying Database");
 					while($row = mysqli_fetch_array($result)){
@@ -42,7 +43,7 @@
 					}
 
 					mysqli_close($db);
-					echo "<p>$searchValue</p>";
+
 
 
 
