@@ -1,4 +1,4 @@
-/*DROP DATABASE IF EXISTS catvideos;*/
+DROP DATABASE IF EXISTS catvideos;
 
 CREATE DATABASE IF NOT EXISTS catvideos;
 GRANT ALL PRIVILEGES ON catvideos.* to 'ylee'@'localhost' identified by 'hello123';
