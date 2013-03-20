@@ -22,7 +22,7 @@
 					<!-- CONTENT -->
 					<h3>Search Result:</h3>
 					<table>
-					<tr><th>Title</th><th>URL</th><th>Length</th><th>Rating</th></tr>
+					<tr><th>Title</th><th>URL</th><th>Rating</th></tr>
 
 					<?php
 					include('dbconnect.php');
@@ -34,17 +34,19 @@
 					while($row = mysqli_fetch_array($result)){
 						$title = $row['title'];
 						$url = $row['url'];
-						$vidlength = $row['vidlength'];
 						$rate = $row['rating'];
-						echo "<tr><td>$title</td><td>$url</td><td>$vidlength</td><td>$rate</td></tr>\n";	
+						echo "<tr><td>$title</td><td>
+						<iframe width=\"560\" height=\"315\" src=".$url." frameborder=\"0\" allowfullscreen></iframe>
+						
+						</td><td>$rate</td></tr>\n";	
 					}
-					
+
 					mysqli_close($db);
 					echo "<p>$searchValue</p>";
-					
 
 
-					
+
+
 					?>
 					</table>
 					
