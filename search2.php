@@ -27,7 +27,11 @@
 					<?php
 					include('dbconnect.php');
 					$searchValue = $_POST['search'];
+					$searchBreed = $_POST['breed'];
+					$searchTag = $_POST['tagss'];
 					echo "<p>$searchValue</p>";
+					echo "<p>$searchBreed</p>";
+					echo "<p>$searchTag</p>";
 					
 					$query = "SELECT title,url,rating FROM videos WHERE title LIKE '%".$searchValue. "%'";
 					$result = mysqli_query($db, $query)

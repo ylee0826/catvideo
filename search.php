@@ -76,12 +76,11 @@
 							<option value="">acting like a dog</option>
 							<option value="">kitten</option>
 							<option value="">doing tricks</option>
-					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-							
 						</select>
 					</form>				
 					</td></tr>
-
+					
+					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
 					</form>
 					<!-- END CONTENT -->
