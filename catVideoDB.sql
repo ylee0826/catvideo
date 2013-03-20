@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS catvideos;
+/*DROP DATABASE IF EXISTS catvideos;*/
 
 CREATE DATABASE IF NOT EXISTS catvideos;
 GRANT ALL PRIVILEGES ON catvideos.* to 'ylee'@'localhost' identified by 'hello123';
@@ -6,7 +6,7 @@ USE catvideos;
 
 DROP TABLE IF EXISTS videos;
 
-CREATE TABLE IF NOT EXISTS videos (a
+CREATE TABLE IF NOT EXISTS videos (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(50) NOT NULL,
   url BLOB NOT NULL,
@@ -55,13 +55,13 @@ CREATE TABLE IF NOT EXISTS vid_tags (
 
 
 INSERT INTO videos(title, url, vidlength, rating) VALUES
-('Many too small boxes and Maru', 'http://www.youtube.com/embed/2XID_W4neJo', '00:02:58', 8.2),
-('Cat wants to be petted like this', 'http://www.youtube.com/embed/V6JCaT69v1M', '00:00:10', 5.0),
-('ROOMBA Cat uses iRobot Roomba 560 Robotic Vacuum Cleaner', 'http://www.youtube.com/embed/ewdbilSWjaM', '00:00:59', 4.0),
-('Surprised Kitty', 'http://www.youtube.com/embed/0Bmhjf0rKe8', '00:00:17', 9.0),
-('Cute cat thinks it\'s a dog', 'http://www.youtube.com/embed/8ZuCT4PmurY', '00:01:09', 6.0),
-('Epic Cat Tower Battle', 'http://www.youtube.com/embed/33uTpyH_OFY', '00:01:59', 7.9),
-('Cat barks like a dog at bubbles', 'http://www.youtube.com/embed/IRxX6LZmr2U', '00:00:55', 8.5);
+('Many too small boxes and Maru', 'https://www.youtube.com/watch?v=2XID_W4neJo', '00:02:58', 8.2),
+('Cat wants to be petted like this', 'http://www.youtube.com/watch?feature=player_embedded&v=V6JCaT69v1M', '00:00:10', 5.0),
+('ROOMBA Cat uses iRobot Roomba 560 Robotic Vacuum Cleaner', 'http://www.youtube.com/watch?feature=player_embedded&v=ewdbilSWjaM', '00:00:59', 4.0),
+('Surprised Kitty', 'http://www.youtube.com/watch?feature=player_embedded&v=0Bmhjf0rKe8', '00:00:17', 9.0),
+('Cute cat thinks it\'s a dog', 'http://www.youtube.com/watch?feature=player_embedded&v=8ZuCT4PmurY#!', '00:01:09', 6.0),
+('Epic Cat Tower Battle', 'https://www.youtube.com/watch?v=33uTpyH_OFY', '00:01:59', 7.9),
+('Cat barks like a dog at bubbles', 'http://www.youtube.com/watch?v=IRxX6LZmr2U', '00:00:55', 8.5);
 
 INSERT INTO tags(tag_name) VALUES
 ('funny'),
