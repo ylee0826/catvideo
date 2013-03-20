@@ -26,7 +26,7 @@
 					<form method = "post" action = "report2.php">
 					<table>
 					<tr><td>Title of video</td><td><input type="text" id="title" name="title" size="50" /></td></tr>
-					<tr><td>URL</td><td><input type="text" id="url" name="url" size="50" /></td></tr>
+					<tr><td>URL (On youtube, click 'Share' and then 'Embed.' Copy the URL in the quotes after 'src = ' and paste it here.</td><td><input type="text" id="url" name="url" size="50" /></td></tr>
 					<tr><td>Video length (hh/mm/ss)</td><td><input type="number" name="hours" min="0" max="10" step="1" value="00" size="1"/>
 					<input type="number" name="minutes" min="0" max="59" step="1" value="00" size="1"/>
 					<input type="number" name="seconds" min="0" max="59" step="1" value="00" size="1"/></td></tr>
