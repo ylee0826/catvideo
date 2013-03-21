@@ -32,16 +32,16 @@
 					<tr><td>&nbsp;</td><td>
 					<form action="">
 						<select name="breed">
-							<option value="unspecified">unspecified</option>
-							<option value="exoticShorthair">exotic shorthair</option>
-							<option value="siamese">siamese</option>
-							<option value="bengal">bengal</option>
-							<option value="scottishFold">scottish fold</option>
-							<option value="persian">persian</option>
-							<option value="britishShorthair">british shorthair</option>
-							<option value="ragdoll">ragdoll</option>
-							<option value="tabby">tabby</option>
-							<option value="hairless">hairless</option>
+							<option value="Unspecified">Unspecified</option>
+							<option value="Persian">Persian</option>
+							<option value="Exotic shorthair">Exotic shorthair</option>
+							<option value="British shorthair">British shorthair</option>
+							<option value="Siamese">Siamese</option>
+							<option value="Ragdoll">Ragdoll</option>
+							<option value="Bengal">Bengal</option>
+							<option value="Tabby">Tabby</option>
+							<option value="Scottish fold">Scottish fold</option>
+							<option value="Hairless">Hairless</option>
 						</select>
 					</form>
 					</td>
