@@ -52,7 +52,12 @@
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>Choose tag you want to search by:</td></tr>
 					<tr><td>&nbsp;</td><td>
+<<<<<<< HEAD
 					<form action="">
+=======
+					
+					<form method = "post" action="search3.php">
+>>>>>>> Search completed, submit worked on
 						<select name="tags">
 							<option value="cute">cute</option>
 							<option value="heartwarming">heartwarming</option>
@@ -75,6 +80,7 @@
 							<option value="kitten">kitten</option>
 							<option value="doing tricks">doing tricks</option>
 						</select>
+						<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
 					</form>				
 					</td></tr>
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
