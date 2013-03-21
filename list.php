@@ -26,7 +26,7 @@
 <tr><th>Title</th><th>URL</th><th>Length</th><th>Rating</th></tr>
 <?php
 	include('dbconnect.php');
-	$query = "SELECT title, url, vidlength, rating FROM videos ORDER BY title";
+	$query = "SELECT title, url, vidlength, rating FROM videos ORDER BY rating";
     $result = mysqli_query($db, $query)
                          or die("Error Querying Database");
     while($row = mysqli_fetch_array($result)) {

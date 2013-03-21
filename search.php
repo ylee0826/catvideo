@@ -27,7 +27,6 @@
 					<table>
 					<tr><td><img src="cat1.png"/></td><td><input type="text" id="search" name="search" size="50"/></td>
 					<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
-					
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>Choose breed you want to search by: </td></tr>
 					<tr><td>&nbsp;</td><td>
@@ -49,37 +48,35 @@
 					</tr>
 					
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td><td>or</td><tr>
+					<tr><td>&nbsp;</td><td>or</td></tr>
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>Choose tag you want to search by:</td></tr>
 					<tr><td>&nbsp;</td><td>
-					
 					<form action="">
 						<select name="tags">
 							<option value="cute">cute</option>
 							<option value="heartwarming">heartwarming</option>
-							<option value="">playing</option>
-							<option value="">cuddling</option>
-							<option value="">biting</option>
-							<option value="">chasing</option>
-							<option value="">eating</option>
-							<option value="">climbing</option>
-							<option value="">being pet</option>
-							<option value="">doing tricks</option>
-							<option value="">funny</option>
-							<option value="">awesome</option>
-							<option value="">sleeping</option>
-							<option value="">fighting</option>
-							<option value="">vocalizing</option>
-							<option value="">jumping</option>
-							<option value="">hissing</option>
-							<option value="">acting like a dog</option>
-							<option value="">kitten</option>
-							<option value="">doing tricks</option>
+							<option value="playing">playing</option>
+							<option value="cuddling">cuddling</option>
+							<option value="biting">biting</option>
+							<option value="chasing">chasing</option>
+							<option value="eating">eating</option>
+							<option value="climbing">climbing</option>
+							<option value="being pet">being pet</option>
+							<option value="doing tricks">doing tricks</option>
+							<option value="funny">funny</option>
+							<option value="awesome">awesome</option>
+							<option value="sleeping">sleeping</option>
+							<option value="fighting">fighting</option>
+							<option value="vocalizing">vocalizing</option>
+							<option value="jumping">jumping</option>
+							<option value="hissing">hissing</option>
+							<option value="acting like a dog">acting like a dog</option>
+							<option value="kitten">kitten</option>
+							<option value="doing tricks">doing tricks</option>
 						</select>
 					</form>				
 					</td></tr>
-					
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					</table>
 					</form>
