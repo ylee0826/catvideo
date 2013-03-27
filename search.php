@@ -23,7 +23,7 @@
 					<h3>Cat Video</h3>
 					<p>Search for a video you want to watch</p>
 					
-					<form method = "post" action = "search2.php">
+				<form method = "post" action = "search2.php">
 					<table>
 					<tr><td><img src="cat1.png"/></td><td><input type="text" id="search" name="search" size="50"/></td>
 					<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
@@ -46,18 +46,15 @@
 					</form>
 					</td>
 					</tr>
-					
+				</form>
+				
+				<form method = "post" action="search3.php">
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>or</td></tr>
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>Choose tag you want to search by:</td></tr>
 					<tr><td>&nbsp;</td><td>
-
 					<form action="">
-
-					
-					<form method = "post" action="search3.php">
-				
 						<select name="tags">
 							<option value="cute">cute</option>
 							<option value="heartwarming">heartwarming</option>
