@@ -52,12 +52,12 @@
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 					<tr><td>&nbsp;</td><td>Choose tag you want to search by:</td></tr>
 					<tr><td>&nbsp;</td><td>
-<<<<<<< HEAD
+
 					<form action="">
-=======
+
 					
 					<form method = "post" action="search3.php">
->>>>>>> Search completed, submit worked on
+				
 						<select name="tags">
 							<option value="cute">cute</option>
 							<option value="heartwarming">heartwarming</option>

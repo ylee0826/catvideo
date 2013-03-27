@@ -28,19 +28,9 @@
 					include('dbconnect.php');
 					$searchValue = $_POST['search'];
 					$searchBreed = $_POST['breed'];
-<<<<<<< HEAD
-					$searchTag = $_POST['tags'];
 					echo "<p>$searchValue</p>";
 					echo "<p>$searchBreed</p>";
-					echo "<p>$searchTag</p>";
 					
-=======
-					/*$searchTag = $_POST['tags'];*/
-					echo "<p>$searchValue</p>";
-					echo "<p>$searchBreed</p>";
-					/*echo "<p>$searchTag</p>";*/
-
->>>>>>> Search completed, submit worked on
 					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND (v.title LIKE '%".$searchValue."%') AND b.breed_name='".$searchBreed."'";
 					/*$query = "SELECT title,url,rating FROM videos WHERE title LIKE '%".$searchValue. "%'"; */
 					$result = mysqli_query($db, $query)
