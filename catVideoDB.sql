@@ -15,6 +15,9 @@ CREATE TABLE IF NOT EXISTS videos (
   PRIMARY KEY (id)
 ) ;
 
+CREATE INDEX video_title
+ON videos (title);
+
 
 DROP TABLE IF EXISTS breeds;
 
