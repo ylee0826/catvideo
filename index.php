@@ -31,12 +31,12 @@
 		
                      <p>&nbsp;</p>
 					<h3>About Us</h3>
-					<img src="us.jpg" />
+					
 					<p>Yun Lee and Erica Mathews are both computer science students at
 					the University of Mary Washington. They created this website because
 					they like cats.</p>
 					<p>If you want to contact us, please email: ylee@umw.edu or emathews@mail.umw.edu</p>
-					
+					<img src="us.jpg" />
 					<!-- END CONTENT -->
 					
 				</div>

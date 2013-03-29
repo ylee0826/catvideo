@@ -95,10 +95,11 @@
 							<option value="vocalizing">vocalizing</option>
 							<option value="doing tricks">doing tricks</option>
 						</select>
-						<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
+						</tr>
 					</form>				
 					</td></tr>
 					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<td><input type="submit" value="Search" /></td>
 					</table>
 					</form>
 					<!-- END CONTENT -->
