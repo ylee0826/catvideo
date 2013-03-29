@@ -35,7 +35,9 @@
 					$rating = $_POST['rating'];
 					
 					$breed = $_POST['breed'];
-					$tag = $_POST['tag'];
+					$category = $_POST['category'];
+					$age = $_POST['age'];
+					$activity = $_POST['activity'];
 					
 					echo "<p>$title $url</p>";
 					echo '<p>$title $url</p>';
@@ -48,7 +50,7 @@
                          or die("Error Querying Database");
 						 
 					$breed_query = "INSERT INTO vid_breeds (id, breed_id) VALUES (LAST_INSERT_ID(), (SELECT breed_id FROM breeds WHERE breed_name = '" . $breed . "'));";
-					$tag_query = "INSERT INTO vid_tags (id, tag_id) VALUES (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $tag . "'));";
+					$tag_query = "INSERT INTO vid_tags (id, tag_id) VALUES (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $category . "')), (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $age . "')), (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $activity . "'));";
 					
 					echo "<p>QUERY $breed_query </p>";
 					$result1 = mysqli_query($db, $breed_query)

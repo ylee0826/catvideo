@@ -25,13 +25,17 @@
 					
 				<form method = "post" action = "search2.php">
 					<table>
-					<tr><td><img src="cat1.png"/></td><td><input type="text" id="search" name="search" size="50"/></td>
-					<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>
-					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td><td>Choose breed you want to search by: </td></tr>
-					<tr><td>&nbsp;</td><td>
+					<tr><td><img src="cat1.png"/></td>
+					
+					<tr><td>By title: </td></tr><td><input type="text" id="search" name="search" size="50"/></td>
+					
+					<tr><td>Advanced options (If you don't want to search by one of these tags, leave it blank.)</td></tr>
+					
+					<tr><td>Breed: </td></tr>
+					<tr><td>
 					<form action="">
 						<select name="breed">
+							<option value="NA">---</option>
 							<option value="Unspecified">Unspecified</option>
 							<option value="Persian">Persian</option>
 							<option value="Exotic shorthair">Exotic shorthair</option>
@@ -46,35 +50,49 @@
 					</form>
 					</td>
 					</tr>
-				</form>
 				
-				<form method = "post" action="search3.php">
-					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td><td>or</td></tr>
-					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-					<tr><td>&nbsp;</td><td>Choose tag you want to search by:</td></tr>
-					<tr><td>&nbsp;</td><td>
+				
+					<tr><td>Age: </td></tr>
+						<tr><td>
+						<form action="">
+							<select name="age">
+								<option value="NA">---</option>
+								<option value="kitten">kitten</option>
+								<option value="juvenile">juvenile</option>
+								<option value="adult">adult</option>
+							</select>
+						</form>
+						</td>
+					</tr>
+				
+				
+					<tr><td>Category: </td></tr>
+						<tr><td>
+						<form action="">
+							<select name="category">
+								<option value="NA">---</option>
+								<option value="cute">cute</option>
+								<option value="heartwarming">heartwarming</option>
+								<option value="funny">funny</option>
+								<option value="awesome">awesome</option>
+							</select>
+						</form>
+						</td>
+						</tr>
+				
+				
+					<tr><td>Activity:</td></tr>
+					<tr><td>
 					<form action="">
-						<select name="tags">
-							<option value="cute">cute</option>
-							<option value="heartwarming">heartwarming</option>
+						<select name="activity">
+							<option value="NA">---</option>
 							<option value="playing">playing</option>
 							<option value="cuddling">cuddling</option>
-							<option value="biting">biting</option>
-							<option value="chasing">chasing</option>
 							<option value="eating">eating</option>
-							<option value="climbing">climbing</option>
-							<option value="being pet">being pet</option>
 							<option value="doing tricks">doing tricks</option>
-							<option value="funny">funny</option>
-							<option value="awesome">awesome</option>
 							<option value="sleeping">sleeping</option>
 							<option value="fighting">fighting</option>
 							<option value="vocalizing">vocalizing</option>
-							<option value="jumping">jumping</option>
-							<option value="hissing">hissing</option>
-							<option value="acting like a dog">acting like a dog</option>
-							<option value="kitten">kitten</option>
 							<option value="doing tricks">doing tricks</option>
 						</select>
 						<td>&nbsp;</td><td><input type="submit" value="Search" /></td></tr>

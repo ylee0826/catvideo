@@ -47,26 +47,31 @@
 					</select></td></tr>
 					
 					
-					<tr><td>Tag</td><td>
-					<select name="tag">
+					<tr><td>Category</td><td>
+					<select name="category">
 					<option>funny</option>
 					<option>cute</option>
 					<option>heartwarming</option>
 					<option>amazing</option>
+					</select></td></tr>
+					
+					
+					<tr><td>Age of cat</td><td>
+					<select name="age">
+					<option>kitten</option>
+					<option>juvenile</option>
+					<option>adult</option>
+					</select></td></tr>
+					
+					
+					<tr><td>Activity</td><td>
+					<select name="activity">
 					<option>playing</option>
 					<option>sleeping</option>
 					<option>cuddling</option>
 					<option>fighting</option>
-					<option>biting</option>
 					<option>vocalizing</option>
-					<option>chasing</option>
-					<option>jumping</option>
 					<option>eating</option>
-					<option>hissing</option>
-					<option>climbing</option>
-					<option>acting like a dog</option>
-					<option>being pet</option>
-					<option>kitten</option>
 					<option>doing tricks</option>
 					</select></td></tr>
 					
