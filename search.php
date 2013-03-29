@@ -27,7 +27,8 @@
 					<table>
 					<tr><td><img src="cat1.png"/></td>
 					
-					<tr><td>By title: </td></tr><td><input type="text" id="search" name="search" size="50"/></td>
+					<tr><td>By title: <input type="text" id="search" name="search" size="70"/></td></tr>
+					<td>&nbsp;</td>
 					
 					<tr><td>Advanced options (If you don't want to search by one of these tags, leave it blank.)</td></tr>
 					
