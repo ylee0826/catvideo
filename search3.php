@@ -26,10 +26,27 @@
 
 					<?php
 					include('dbconnect.php');
-					$searchTag = $_POST['tags'];
-					echo "<p>$searchTag</p>";
-
+					/*$searchTag = $_POST['tags'];*/
+					$searchBreed = $_POST['breed'];
+					
+					/*echo "<p>$searchTag</p>";*/
+					echo "<p>$searchBreed</p>";
+					
+					/*if($searchTag =="blank"){
+					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$searchBreed."'";
+					}else{
 					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN tags t JOIN vid_tags vt WHERE v.id=vt.id AND t.tag_id=vt.tag_id AND t.tag_name='".$searchTag."'";
+
+					}
+					*/
+					if($searchBreed=="blank"){
+						echo "<p>breed section blank</p>";
+					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$searchBreed."'";
+
+					}else{
+					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$searchBreed."'";
+					}
+					
 					$result = mysqli_query($db, $query)
 							or die("Error Querying Database");
 					while($row = mysqli_fetch_array($result)){

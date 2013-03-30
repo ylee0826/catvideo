@@ -10,6 +10,7 @@
 <body>
 <?php
    include('header.html');
+   
 ?>
 
 
@@ -20,41 +21,24 @@
 				<div class="content">
 				
 					<!-- CONTENT -->
-					<h3>Search Result:</h3>
-					<table>
-					<tr><th>Title</th><th>URL</th><th>Rating</th></tr>
-
+					<h3>Search Result: </h3>
+					
 					<?php
 					include('dbconnect.php');
-					$searchValue = $_POST['search'];
-					$searchBreed = $_POST['breed'];
-					$searchAge = $_POST['age'];
-					$searchCategory = $_POST['category'];
-					$searchActivity = $_POST['activity'];
-					echo "<p>$searchValue</p>";
-					echo "<p>$searchBreed</p>";
-					echo "<p>$searchAge</p>";
-					echo "<p>$searchCategory</p>";
-					echo "<p>$searchActivity</p>";
-					
-					$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN breeds b JOIN vid_breeds vb JOIN tags t JOIN vid_tags vt WHERE (v.title LIKE '%".$searchValue."%')" 
-					if ($searchBreed != "---"){
-						$query = $query."AND (v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$searchBreed."')";
-						}
-					if ($searchAge != "---"){
-						$query = $query."AND (v.id=vt.id AND t.tag_id=vt.tag_id AND t.tag_name='".$searchAge."')";
-						}
-					if ($searchAge != "---"){
-						$query = $query."AND (v.id=vt.id AND t.tag_id=vt.tag_id AND t.tag_name='".$searchCategory."')";
-						}
-					if ($searchAge != "---"){
-						$query = $query."AND (v.id=vt.id AND t.tag_id=vt.tag_id AND t.tag_name='".$searchActivity."')";
-						}
-					$query = $query.";";
-					
-					
+					$search = $_POST['title'];
+	
+					$breed = $_POST['breed'];
+					$category = $_POST['category'];
+					$age = $_POST['age'];
+					$activity = $_POST['activity'];
+					echo "<p>$search</p>";
+					if(($breed=="---")&&($category=="---")&&($age=="---")&&($activity=="---")){
+						$query = "SELECT title, url, rating FROM videos WHERE title LIKE '%".$search. "%'";
+					}else{
+					$query = "SELECT title, url, rating FROM videos WHERE title LIKE '%maru%'";
+					}
 					$result = mysqli_query($db, $query)
-							or die("No videos matching that description found. Please try again.");
+							or die("Error Querying Database");
 					while($row = mysqli_fetch_array($result)){
 						$title = $row['title'];
 						$url = $row['url'];
@@ -66,13 +50,8 @@
 					}
 
 					mysqli_close($db);
-
-
-
-
-
 					?>
-					</table>
+					
 					
 					
 					</form>

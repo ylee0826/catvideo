@@ -20,88 +20,64 @@
 				<div class="content">
 				
 					<!-- CONTENT -->
-					<h3>Cat Video</h3>
-					<p>Search for a video you want to watch</p>
+					<h3>Submission</h3>
+					<p>Submit a cat video we missed! Just fill out the form. </p>
 					
-				<form method = "post" action = "search2.php">
+					<form method = "post" action = "search2.php">
 					<table>
-					<tr><td><img src="cat1.png"/></td>
+					<tr><td>Search: </td><td><input type="text" id="title" name="title" size="50" /></td></tr>
+			
+					<tr><td>Breed</td><td> 
+					<select name="breed">
+					<option>---</option>
+					<option>Unspecified</option>
+					<option>Persian</option>
+					<option>Exotic shorthair</option>
+					<option>British shorthair</option>
+					<option>Siamese</option>
+					<option>Ragdoll</option>
+					<option>Bengal</option>
+					<option>Tabby</option>
+					<option>Scottish fold</option>
+					<option>Hairless</option>
+					</select></td></tr>
 					
-					<tr><td>By title: <input type="text" id="search" name="search" size="70"/></td></tr>
-					<td>&nbsp;</td>
 					
-					<tr><td>Advanced options (If you don't want to search by one of these tags, leave it blank.)</td></tr>
+					<tr><td>Category</td><td>
+					<select name="category">
+					<option>---</option>
+					<option>funny</option>
+					<option>cute</option>
+					<option>heartwarming</option>
+					<option>amazing</option>
+					</select></td></tr>
 					
-					<tr><td>Breed: </td></tr>
-					<tr><td>
-					<form action="">
-						<select name="breed">
-							<option value="NA">---</option>
-							<option value="Unspecified">Unspecified</option>
-							<option value="Persian">Persian</option>
-							<option value="Exotic shorthair">Exotic shorthair</option>
-							<option value="British shorthair">British shorthair</option>
-							<option value="Siamese">Siamese</option>
-							<option value="Ragdoll">Ragdoll</option>
-							<option value="Bengal">Bengal</option>
-							<option value="Tabby">Tabby</option>
-							<option value="Scottish fold">Scottish fold</option>
-							<option value="Hairless">Hairless</option>
-						</select>
-					</form>
-					</td>
-					</tr>
-				
-				
-					<tr><td>Age: </td></tr>
-						<tr><td>
-						<form action="">
-							<select name="age">
-								<option value="NA">---</option>
-								<option value="kitten">kitten</option>
-								<option value="juvenile">juvenile</option>
-								<option value="adult">adult</option>
-							</select>
-						</form>
-						</td>
-					</tr>
-				
-				
-					<tr><td>Category: </td></tr>
-						<tr><td>
-						<form action="">
-							<select name="category">
-								<option value="NA">---</option>
-								<option value="cute">cute</option>
-								<option value="heartwarming">heartwarming</option>
-								<option value="funny">funny</option>
-								<option value="awesome">awesome</option>
-							</select>
-						</form>
-						</td>
-						</tr>
-				
-				
-					<tr><td>Activity:</td></tr>
-					<tr><td>
-					<form action="">
-						<select name="activity">
-							<option value="NA">---</option>
-							<option value="playing">playing</option>
-							<option value="cuddling">cuddling</option>
-							<option value="eating">eating</option>
-							<option value="doing tricks">doing tricks</option>
-							<option value="sleeping">sleeping</option>
-							<option value="fighting">fighting</option>
-							<option value="vocalizing">vocalizing</option>
-							<option value="doing tricks">doing tricks</option>
-						</select>
-						</tr>
-					</form>				
-					</td></tr>
-					<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-					<td><input type="submit" value="Search" /></td>
+					
+					<tr><td>Age of cat</td><td>
+					<select name="age">
+					<option>---</option>
+					<option>kitten</option>
+					<option>juvenile</option>
+					<option>adult</option>
+					</select></td></tr>
+					
+					
+					<tr><td>Activity</td><td>
+					<select name="activity">
+					<option>---</option>
+					<option>playing</option>
+					<option>sleeping</option>
+					<option>cuddling</option>
+					<option>fighting</option>
+					<option>vocalizing</option>
+					<option>eating</option>
+					<option>doing tricks</option>
+					</select></td></tr>
+					
+					<tr><td>&nbsp;</td><td><input type="submit" value="Submit" /></td></tr>
+			
 					</table>
+					
 					</form>
 					<!-- END CONTENT -->
 					
