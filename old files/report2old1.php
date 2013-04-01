@@ -50,24 +50,14 @@
                          or die("Error Querying Database");
 						 
 					$breed_query = "INSERT INTO vid_breeds (id, breed_id) VALUES (LAST_INSERT_ID(), (SELECT breed_id FROM breeds WHERE breed_name = '" . $breed . "'));";
-					$category_query = "INSERT INTO vid_categories (id, categ_id) VALUES (LAST_INSERT_ID(), (SELECT categ_id FROM categories WHERE categ_name = '" . $category . "'));";
-					$age_query = "INSERT INTO vid_ages (id, age_id) VALUES (LAST_INSERT_ID(), (SELECT age_id FROM ages WHERE age_name = '" . $age . "'));";
-					$activity_query = "INSERT INTO vid_activities (id, activ_id) VALUES (LAST_INSERT_ID(), (SELECT activ_id FROM activities WHERE activ_name = '" . $activity . "'));";
+					$tag_query = "INSERT INTO vid_tags (id, tag_id) VALUES (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $category . "')), (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $age . "')), (LAST_INSERT_ID(), (SELECT tag_id FROM tags WHERE tag_name = '" . $activity . "'));";
 					
 					echo "<p>QUERY $breed_query </p>";
 					$result1 = mysqli_query($db, $breed_query)
                          or die("Error Querying Database");
 
-					echo "<p>QUERY $category_query </p>";
-					$result2 = mysqli_query($db, $category_query)
-                         or die("Error Querying Database");
-						 
-					echo "<p>QUERY $age_query </p>";
-					$result3 = mysqli_query($db, $age_query)
-                         or die("Error Querying Database");
-						 
-					echo "<p>QUERY $activity_query </p>";
-					$result4 = mysqli_query($db, $activity_query)
+					echo "<p>QUERY $tag_query </p>";
+					$result2 = mysqli_query($db, $tag_query)
                          or die("Error Querying Database");
 					
 					?>

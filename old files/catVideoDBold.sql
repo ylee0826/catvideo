@@ -27,29 +27,12 @@ CREATE TABLE IF NOT EXISTS breeds (
 );
 
 
-DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS tags;
 
-CREATE TABLE IF NOT EXISTS categories (
-	categ_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	categ_name VARCHAR(30)
+CREATE TABLE IF NOT EXISTS tags (
+	tag_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	tag_name VARCHAR(30)
 );
-
-
-DROP TABLE IF EXISTS ages;
-
-CREATE TABLE IF NOT EXISTS ages (
-	age_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	age_name VARCHAR(30)
-);
-
-
-DROP TABLE IF EXISTS activities;
-
-CREATE TABLE IF NOT EXISTS activities (
-	activ_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	activ_name VARCHAR(30)
-);
-
 
 
 DROP TABLE IF EXISTS vid_breeds;
@@ -63,36 +46,14 @@ CREATE TABLE IF NOT EXISTS vid_breeds (
 );
 
 
-DROP TABLE IF EXISTS vid_categories;
+DROP TABLE IF EXISTS vid_tags;
 
-CREATE TABLE IF NOT EXISTS vid_categories (
+CREATE TABLE IF NOT EXISTS vid_tags (
 	id INT NOT NULL,
-	categ_id INT NOT NULL,
+	tag_id INT NOT NULL,
 	FOREIGN KEY (id) REFERENCES videos(id),
-	FOREIGN KEY (categ_id) REFERENCES categories(categ_id),
-	PRIMARY KEY (id, categ_id)
-);
-
-
-DROP TABLE IF EXISTS vid_ages;
-
-CREATE TABLE IF NOT EXISTS vid_ages (
-	id INT NOT NULL,
-	age_id INT NOT NULL,
-	FOREIGN KEY (id) REFERENCES videos(id),
-	FOREIGN KEY (age_id) REFERENCES ages(age_id),
-	PRIMARY KEY (id, age_id)
-);
-
-
-DROP TABLE IF EXISTS vid_activities;
-
-CREATE TABLE IF NOT EXISTS vid_activities (
-	id INT NOT NULL,
-	activ_id INT NOT NULL,
-	FOREIGN KEY (id) REFERENCES videos(id),
-	FOREIGN KEY (activ_id) REFERENCES activities(activ_id),
-	PRIMARY KEY (id, activ_id)
+	FOREIGN KEY (tag_id) REFERENCES tags(tag_id),
+	PRIMARY KEY (id, tag_id)
 );
 
 
@@ -105,22 +66,18 @@ INSERT INTO videos(title, url, vidlength, rating) VALUES
 ('Epic Cat Tower Battle', 'http://www.youtube.com/embed/33uTpyH_OFY', '00:01:59', 7.9),
 ('Cat barks like a dog at bubbles', 'http://www.youtube.com/embed/IRxX6LZmr2U', '00:00:55', 8.5);
 
-INSERT INTO categories(categ_name) VALUES
+INSERT INTO tags(tag_name) VALUES
 ('funny'),
 ('cute'),
 ('heartwarming'),
-('amazing');
-
-INSERT INTO activities(activ_name) VALUES
+('amazing'),
 ('playing'),
 ('sleeping'),
 ('cuddling'),
 ('fighting'),
 ('vocalizing'),
 ('eating'),
-('doing tricks');
-
-INSERT INTO ages(age_name) VALUES
+('doing tricks'),
 ('kitten'),
 ('juvenile'),
 ('adult');
@@ -137,40 +94,34 @@ INSERT INTO breeds(breed_name) VALUES
 ('Scottish fold'),
 ('Hairless');
 
-INSERT INTO vid_categories(id, categ_id) VALUES
-(1,1),
-(2,1),
-(2,2),
-(3,1),
-(4,1),
-(4,2),
-(5,1),
-(5,2),
-(5,3),
-(6,1),
-(7,1),
-(7,2);
-
-INSERT INTO vid_ages(id, age_id) VALUES
-(1,3),
-(2,3),
-(3,3),
-(4,1),
-(5,2),
-(6,3),
-(7,3);
-
-INSERT INTO vid_activities(id, activ_id) VALUES
-(1,1),
-(2,3),
-(2,7),
-(3,1),
-(4,1),
-(5,1),
-(5,7),
-(6,1),
-(6,4),
-(7,1);
+INSERT INTO vid_tags(id, tag_id) VALUES
+(1, 1),
+(1, 5),
+(1, 14),
+(2, 1),
+(2, 2),
+(2, 7),
+(2, 11),
+(2, 14),
+(3, 1),
+(3, 14),
+(4, 1),
+(4, 2),
+(4, 5),
+(4, 12),
+(5, 1),
+(5, 5),
+(5, 11),
+(5, 13),
+(6, 1),
+(6, 5),
+(6, 8),
+(6, 14),
+(7, 1),
+(7, 2),
+(7, 5),
+(7, 9),
+(7, 14);
 
 INSERT INTO vid_breeds(id, breed_id) VALUES
 (1, 9),

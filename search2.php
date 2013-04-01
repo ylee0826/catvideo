@@ -32,6 +32,7 @@
 					$age = $_POST['age'];
 					$activity = $_POST['activity'];
 					echo "<p>$search</p>";
+					
 					if(($breed=="---")&&($category=="---")&&($age=="---")&&($activity=="---")){
 						$query = "SELECT title, url, rating FROM videos WHERE title LIKE '%".$search. "%'";
 					}else{
