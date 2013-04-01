@@ -22,7 +22,8 @@
 				
 					<!-- CONTENT -->
 					<h3>Search Result: </h3>
-					
+					<table>
+					<tr><th>Title</th><th>URL</th><th>Rating</th></tr>
 					<?php
 					include('dbconnect.php');
 					$search = $_POST['title'];
@@ -74,7 +75,7 @@
 					?>
 					
 					
-					
+					</table>
 					</form>
 					<!-- END CONTENT -->
 					
