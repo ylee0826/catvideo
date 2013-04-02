@@ -74,8 +74,8 @@
 						if(($category=="---")&&($age=="---")&&($activity!="---")&&($breed!="---")){
 							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM activities x JOIN vid_activities vx JOIN videos v JOIN ";
 							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."' AND v.title LIKE '%".$search."%'";
-							$query = $query." AND x.activity_name = '".$activity."'";*/
-						}
+							$query = $query." AND x.activity_name = '".$activity."'";
+						}*/
 					}
 					$result = mysqli_query($db, $query)
 							or die("Error Querying Database");
