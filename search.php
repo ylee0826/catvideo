@@ -25,8 +25,8 @@
 					
 					<form method = "post" action = "search2.php">
 					<table>
-					<tr><td>Search: </td><td><input type="text" id="title" name="title" size="50" /></td><td><img src="cat1.png" /></td></tr>
-					<tr><td>Advance Search: </td><td>(If yo don't want to search by one of those tags, leave it blank.)</td></tr>
+					<tr><td>Search: </td><td><input type="text" id="title" name="title" size="50" value = " "/></td><td><img src="cat1.png" /></td></tr>
+					<tr><td>Advance Search: </td><td>(If you don't want to search by one of these tags, leave it blank.)</td></tr>
 					<tr><td>Breed</td><td> 
 					<select name="breed">
 					<option>---</option>

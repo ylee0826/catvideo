@@ -40,24 +40,42 @@
 						/*if only breed is choosen*/
 						if(($category=="---")&&($age=="---")&&($activity=="---")){
 							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN ";
-							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."'";
+							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."' AND v.title LIKE '%".$search."%'";
 						}
 						/*if only category is choosen*/
 						if(($breed=="---")&&($age=="---")&&($activity=="---")){
 							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN ";
-							$query = $query." categories c JOIN vid_categories vc WHERE v.id=vc.id AND c.categ_id=vc.categ_id AND c.categ_name='".$category."'";
+							$query = $query." categories c JOIN vid_categories vc WHERE v.id=vc.id AND c.categ_id=vc.categ_id AND c.categ_name='".$category."' AND v.title LIKE '%".$search."%'";
 						}
 						/*if only age is choosen*/
 						if(($breed=="---")&&($category=="---")&&($activity=="---")){
 							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN ";
-							$query = $query." ages a JOIN vid_ages va WHERE v.id=va.id AND a.age_id=va.age_id AND a.age_name='".$age."'";
+							$query = $query." ages a JOIN vid_ages va WHERE v.id=va.id AND a.age_id=va.age_id AND a.age_name='".$age."' AND v.title LIKE '%".$search."%'";
 						}
 						/*if only activity is choosen*/
 						if(($breed=="---")&&($category=="---")&&($age=="---")){
 							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM videos v JOIN ";
-							$query = $query." activities act JOIN vid_activities vact WHERE v.id=vact.id AND act.activ_id=vact.activ_id AND act.activ_name='".$activity."'";
+							$query = $query." activities act JOIN vid_activities vact WHERE v.id=vact.id AND act.activ_id=vact.activ_id AND act.activ_name='".$activity."' AND v.title LIKE '%".$search."%'";
 						}
 						
+						/*if breed and category are chosen*/
+						if(($age=="---")&&($activity=="---")&&($breed!="---")&&($category!="---")){
+							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM categories c JOIN vid_categories vc JOIN videos v JOIN ";
+							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."' AND v.title LIKE '%".$search."%'";
+							$query = $query." AND c.categ_name = '".$category."'";
+						}
+						/*if breed and age are chosen*/
+						if(($category=="---")&&($activity=="---")&&($age!="---")&&($breed!="---")){
+							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM ages a JOIN vid_ages va JOIN videos v JOIN ";
+							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."' AND v.title LIKE '%".$search."%'";
+							$query = $query." AND a.age_name = '".$age."'";
+						}
+						/*if breed and activity are chosen
+						if(($category=="---")&&($age=="---")&&($activity!="---")&&($breed!="---")){
+							$query = "SELECT DISTINCT v.title, v.url, v.rating FROM activities x JOIN vid_activities vx JOIN videos v JOIN ";
+							$query = $query." breeds b JOIN vid_breeds vb WHERE v.id=vb.id AND b.breed_id=vb.breed_id AND b.breed_name='".$breed."' AND v.title LIKE '%".$search."%'";
+							$query = $query." AND x.activity_name = '".$activity."'";*/
+						}
 					}
 					$result = mysqli_query($db, $query)
 							or die("Error Querying Database");
